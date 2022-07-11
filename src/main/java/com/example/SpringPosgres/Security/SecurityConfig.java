@@ -1,7 +1,7 @@
 package com.example.SpringPosgres.Security;
 
-import com.example.SpringProject.Filter.CustomAuthorizationFilter;
-import com.example.SpringProject.Filter.CustomerAuthenticationFilter;
+import com.example.SpringPosgres.Filter.CustomAuthorizationFilter;
+import com.example.SpringPosgres.Filter.CustomerAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

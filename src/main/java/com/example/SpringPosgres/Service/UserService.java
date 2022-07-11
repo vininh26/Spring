@@ -6,7 +6,6 @@ import com.example.SpringPosgres.Model.UserModel;
 
 import java.util.List;
 
-
 public interface UserService {
     UserModel userSave(UserModel userModel);
     Role saveRole(Role role);

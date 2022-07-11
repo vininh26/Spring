@@ -66,13 +66,14 @@ public class ControllerApi {
                 JWTVerifier verifier = JWT.require(algorithm).build();
                 DecodedJWT decodedJWT = verifier.verify(refresh_token);
                 String username = decodedJWT.getSubject();
+
                 UserModel userModel = userService.getUser(username);
 
                 String access_Token = JWT.create()
-                        .withSubject(userModel.getUsername())
+//                        .withSubject(userModel.getUsername())
                         .withExpiresAt(new Date(System.currentTimeMillis()+10 * 60 *1000))
                         .withIssuer(request.getRequestURL().toString())
-                        .withClaim("roles",userModel.getRoles().stream().map(Role::getName).collect(Collectors.toList()))
+//                        .withClaim("roles",userModel.getRoles().stream().map(Role::getName).collect(Collectors.toList()))
                         .sign(algorithm);
 
                 Map<String,String> tokens = new HashMap<>();
